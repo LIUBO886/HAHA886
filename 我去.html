@@ -1,0 +1,34 @@
+import React, { useState } from 'react';
+
+const App: React.FC = () => {
+  const [input, setInput] = useState('');
+  const [showMessage, setShowMessage] = useState(false);
+
+  const handleContinue = () => {
+    if (input === '你好') {
+      setShowMessage(true);
+    } else {
+      setShowMessage(false);
+    }
+  };
+
+  return (
+    <div style={{ padding: '40px', textAlign: 'center' }}>
+      <h2>请输入“你好”</h2>
+      <input
+        type="text"
+        value={input}
+        onChange={e => setInput(e.target.value)}
+        style={{ fontSize: '18px', padding: '8px', width: '200px' }}
+      />
+      <br /><br />
+      <button onClick={handleContinue} style={{ fontSize: '18px', padding: '8px 24px' }}>
+        继续
+      </button>
+      <br /><br />
+      {showMessage && <div style={{ fontSize: '22px', color: '#2185d0' }}>你好呀</div>}
+    </div>
+  );
+};
+
+export default App;
