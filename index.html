@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>刘博制作的让手机用户也可以使用</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>刘博制作的让手机用户也可以使用</h1>
+        <div class="game-info">
+            <div class="score">分数: <span id="score">0</span></div>
+            <div class="level">等级: <span id="level">1</span></div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+        <div class="controls">
+            <button id="startBtn" class="btn">开始游戏</button>
+            <button id="pauseBtn" class="btn" disabled>暂停游戏</button>
+            <button id="resetBtn" class="btn" disabled>重置游戏</button>
+        </div>
+        <!-- 移动设备触摸控制按钮 -->
+        <div class="touch-controls">
+            <button id="touchUp" class="touch-btn touch-up">↑</button>
+            <button id="touchLeft" class="touch-btn touch-left">←</button>
+            <button id="touchRight" class="touch-btn touch-right">→</button>
+            <button id="touchDown" class="touch-btn touch-down">↓</button>
+        </div>
+        <div class="instructions">
+            <h3>操作说明</h3>
+            <p>使用方向键控制蛇的移动方向</p>
+            <p>或者使用WASD键: W(上), A(左), S(下), D(右)</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
